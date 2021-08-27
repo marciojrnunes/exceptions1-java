@@ -51,7 +51,7 @@ public class Reservation {
 		
 		Date now = new Date();	//Data Atual
 		if(checkIn.before(now) || checkOut.before(now)) {  //1verifica se as datas não são anteriores a agora
-			throw new DomainException("Reservation dates for update must be future");
+			throw new DomainException("Reservation  dates for update must be future");
 		} 
 		if(!checkOut.after(checkIn)) { //Se data de checkou não é anterior a data de checkin
 			throw new DomainException("Check-out date must be after check-in date");
